@@ -2,7 +2,9 @@
 
 Example FLASK web app that talks to a book recommendation microservice using GRPC
 
-Based on [Tutorial from realpython.com]
+[1]: https://realpython.com/python-microservices-grpc
+
+Based on [Tutorial from realpython.com][1]
 
 
 ### Structure
