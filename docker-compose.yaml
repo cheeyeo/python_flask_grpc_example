@@ -1,0 +1,23 @@
+services:
+  recommendations:
+    build:
+      context: .
+      dockerfile: Dockerfile.recommendations
+    image: recommendations:latest
+    networks:
+      - microservices
+
+  marketplace:
+    build:
+      context: .
+      dockerfile: Dockerfile.marketplace
+    image: marketplace:latest
+    environment:
+      RECOMMENDATIONS_HOST: recommendations
+    networks:
+      - microservices
+    ports:
+      - 5000:5000
+
+networks:
+  microservices:
